@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^1.7.1",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "dayjs": "^1.10.7",
     "framer-motion": "^4.1.17",
     "html-react-parser": "^1.4.0",
     "microcms-js-sdk": "^2.0.0",
