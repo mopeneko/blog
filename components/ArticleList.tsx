@@ -7,7 +7,7 @@ type Props = {
   articles: Article[];
 };
 
-const ArticleList: React.FC<Props> = ({ articles }: Props) => {
+const ArticleList: React.FC<Props> = ({ articles }) => {
   return (
     <div>
       {articles.map((article: Article) => (

@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   };
 };
 
-const ArticleDetail: React.FC<Props> = ({ article }: Props) => {
+const ArticleDetail: React.FC<Props> = ({ article }) => {
   return (
     <>
       <NextSeo title={`${article.title} - もペブログ`} />
