@@ -1,9 +1,8 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:prettier/recommended"
-  ],
+  "extends": "next/core-web-vitals",
+  "plugins": ["prettier"],
   "rules": {
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "prettier/prettier": ["error", { "singleQuote": true }]
   }
 }
