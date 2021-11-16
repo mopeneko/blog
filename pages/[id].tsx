@@ -1,11 +1,6 @@
 import { GetStaticProps } from 'next';
-import { Container, Heading, Text, Code, Link } from '@chakra-ui/layout';
-import parse, {
-  DOMNode,
-  domToReact,
-  Element,
-  HTMLReactParserOptions,
-} from 'html-react-parser';
+import { Container, Heading, Text, Box } from '@chakra-ui/layout';
+import dayjs from 'dayjs';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { client } from '../libs/client';
@@ -47,7 +42,12 @@ const ArticleDetail: React.FC<Props> = ({ article }: Props) => {
       <Container maxW="container.md" pt={4}>
         <article>
           <Heading>{article.title}</Heading>
-          <HTMLRenderer html={article.content} />
+          <Text>
+            {dayjs(article.publishedAt).tz('Asia/Tokyo').format('YYYY/MM/DD')}
+          </Text>
+          <Box mt={5}>
+            <HTMLRenderer html={article.content} />
+          </Box>
         </article>
       </Container>
       <Footer />
