@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 import { Container, Heading, Text, Box } from '@chakra-ui/layout';
 import dayjs from 'dayjs';
 import Footer from '../components/Footer';
@@ -38,6 +39,11 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 const ArticleDetail: React.FC<Props> = ({ article }: Props) => {
   return (
     <>
+      <Head>
+        <title>{article.title} - もぺブログ</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <Header />
       <Container maxW="container.md" pt={4}>
         <article>

@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 import { Box, Link, Text } from '@chakra-ui/layout';
 import { Container } from '@chakra-ui/react';
 import { client } from '../libs/client';
@@ -24,6 +25,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const Home: React.FC<Props> = ({ articles }: Props) => {
   return (
     <>
+      <Head>
+        <title>もぺブログ</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <Header />
       <Container maxW="container.md">
         <ArticleList articles={articles} />
