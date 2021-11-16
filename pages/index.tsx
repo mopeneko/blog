@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
-import { Box, Link, Text } from '@chakra-ui/layout';
 import { Container } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
 import { client } from '../libs/client';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -25,10 +24,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const Home: React.FC<Props> = ({ articles }: Props) => {
   return (
     <>
-      <Head>
-        <title>もぺブログ</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <NextSeo title="もぺブログ" />
 
       <Header />
       <Container maxW="container.md">
