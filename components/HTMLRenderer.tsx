@@ -1,4 +1,11 @@
-import { Code, Text, Link, Box } from '@chakra-ui/layout';
+import {
+  Code,
+  Text,
+  Link,
+  Box,
+  UnorderedList,
+  ListItem,
+} from '@chakra-ui/layout';
 import parse, {
   DOMNode,
   HTMLReactParserOptions,
@@ -75,6 +82,16 @@ const options: HTMLReactParserOptions = {
             {domToReact(domNode.children, options)}
           </Link>
         );
+      }
+
+      if (domNode.name === 'ul') {
+        return (
+          <UnorderedList>{domToReact(domNode.children, options)}</UnorderedList>
+        );
+      }
+
+      if (domNode.name === 'li') {
+        return <ListItem>{domToReact(domNode.children, options)}</ListItem>;
       }
     }
   },
