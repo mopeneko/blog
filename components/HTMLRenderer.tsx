@@ -6,6 +6,10 @@ import parse, {
   domToReact,
 } from 'html-react-parser';
 
+const commonHeadingProps = {
+  mt: '20px',
+};
+
 const options: HTMLReactParserOptions = {
   replace: (domNode: DOMNode) => {
     if (domNode instanceof Element && domNode.attribs) {
@@ -15,7 +19,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h1') {
         return (
-          <Text as="h1" fontSize="4xl">
+          <Text as="h1" fontSize="4xl" {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -23,7 +27,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h2') {
         return (
-          <Text as="h2" fontSize="3xl">
+          <Text as="h2" fontSize="3xl" {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -31,7 +35,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h3') {
         return (
-          <Text as="h3" fontSize="2xl">
+          <Text as="h3" fontSize="2xl" {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -39,7 +43,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h4') {
         return (
-          <Text as="h4" fontSize="xl">
+          <Text as="h4" fontSize="xl" {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -47,7 +51,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h5') {
         return (
-          <Text as="h5" fontSize="lg">
+          <Text as="h5" fontSize="lg" {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
