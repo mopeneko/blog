@@ -1,11 +1,11 @@
 import { GetStaticProps } from 'next';
 import { Container } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import { client } from '../libs/client';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ArticleList from '../components/ArticleList';
 import type { Article } from 'mopeneko_blog';
+import { client } from 'libs/client';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import ArticleList from 'components/ArticleList';
 
 type Props = {
   articles: Article[];
