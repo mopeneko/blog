@@ -26,7 +26,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h1') {
         return (
-          <Text as="h1" fontSize="4xl" {...commonHeadingProps}>
+          <Text as='h1' fontSize='4xl' {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -34,7 +34,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h2') {
         return (
-          <Text as="h2" fontSize="3xl" {...commonHeadingProps}>
+          <Text as='h2' fontSize='3xl' {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -42,7 +42,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h3') {
         return (
-          <Text as="h3" fontSize="2xl" {...commonHeadingProps}>
+          <Text as='h3' fontSize='2xl' {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -50,7 +50,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h4') {
         return (
-          <Text as="h4" fontSize="xl" {...commonHeadingProps}>
+          <Text as='h4' fontSize='xl' {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -58,7 +58,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'h5') {
         return (
-          <Text as="h5" fontSize="lg" {...commonHeadingProps}>
+          <Text as='h5' fontSize='lg' {...commonHeadingProps}>
             {domToReact(domNode.children, options)}
           </Text>
         );
@@ -70,7 +70,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'blockquote') {
         return (
-          <Box as="blockquote" borderWidth={1} p={2}>
+          <Box as='blockquote' borderWidth={1} p={2}>
             {domToReact(domNode.children, options)}
           </Box>
         );
@@ -78,7 +78,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'a') {
         return (
-          <Link color="teal.500" href={domNode.attribs.href}>
+          <Link color='teal.500' href={domNode.attribs.href}>
             {domToReact(domNode.children, options)}
           </Link>
         );
