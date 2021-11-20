@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import { Link, Box, Text } from '@chakra-ui/layout';
 import dayjs from 'dayjs';
-import { Article } from '../types/article';
+import type { Article } from 'mopeneko_blog';
 
 type Props = {
   articles: Article[];
