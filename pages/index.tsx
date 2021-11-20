@@ -24,10 +24,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const Home: React.FC<Props> = ({ articles }) => {
   return (
     <>
-      <NextSeo title="もぺブログ" />
+      <NextSeo title='もぺブログ' />
 
       <Header />
-      <Container maxW="container.md">
+      <Container maxW='container.md'>
         <ArticleList articles={articles} />
       </Container>
       <Footer />
