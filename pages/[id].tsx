@@ -42,7 +42,7 @@ const ArticleDetail: React.FC<Props> = ({ article }) => {
       <NextSeo title={`${article.title} - もペブログ`} />
 
       <Header />
-      <Container maxW="container.md" pt={4}>
+      <Container maxW='container.md' pt={4}>
         <article>
           <Heading>{article.title}</Heading>
           <Text>
