@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { client } from '../libs/client';
-import { Article } from '../types/article';
+import { Article } from 'mopeneko_blog';
 import HTMLRenderer from '../components/HTMLRenderer';
 
 type Props = {
