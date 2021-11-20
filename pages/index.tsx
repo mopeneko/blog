@@ -5,7 +5,7 @@ import { client } from '../libs/client';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ArticleList from '../components/ArticleList';
-import { Article } from '../types/article';
+import type { Article } from 'mopeneko_blog';
 
 type Props = {
   articles: Article[];
@@ -24,10 +24,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const Home: React.FC<Props> = ({ articles }) => {
   return (
     <>
-      <NextSeo title="もぺブログ" />
+      <NextSeo title='もぺブログ' />
 
       <Header />
-      <Container maxW="container.md">
+      <Container maxW='container.md'>
         <ArticleList articles={articles} />
       </Container>
       <Footer />
