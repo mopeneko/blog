@@ -5,7 +5,7 @@ import { client } from '../libs/client';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ArticleList from '../components/ArticleList';
-import { Article } from '../types/article';
+import type { Article } from 'mopeneko_blog';
 
 type Props = {
   articles: Article[];
