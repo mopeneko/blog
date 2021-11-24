@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
   const data = await client.getList({ endpoint: 'articles' });
 
   const paths = data.contents.map((content: Article) => `/${content.id}`);
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<Props, Params> = async ({
@@ -33,6 +33,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
     props: {
       article,
     },
+    revalidate: 10,
   };
 };
 
