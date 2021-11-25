@@ -1,12 +1,12 @@
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 import { Container, Heading, Text, Box } from '@chakra-ui/layout';
-import dayjs from 'dayjs';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import { client } from '../libs/client';
 import { Article } from 'mopeneko_blog';
-import HTMLRenderer from '../components/HTMLRenderer';
+import dayjs from 'dayjs';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import { client } from 'libs/client';
+import HTMLRenderer from 'components/HTMLRenderer';
 
 type Props = {
   article: Article;
