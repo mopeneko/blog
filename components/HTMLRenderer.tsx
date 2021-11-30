@@ -78,7 +78,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'a') {
         return (
-          <Link color='teal.500' href={domNode.attribs.href}>
+          <Link color='teal.500' href={domNode.attribs.href} target='_blank'>
             {domToReact(domNode.children, options)}
           </Link>
         );
