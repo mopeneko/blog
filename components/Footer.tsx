@@ -19,7 +19,7 @@ const Footer = () => {
           <Text>mopeneko</Text>
         </div>
         <div>
-          <Link color='teal.500' href='htps://github.com/mopeneko/blog'>
+          <Link color='teal.500' href='https://github.com/mopeneko/blog'>
             <Icon as={MdCode} /> Source Code
           </Link>
         </div>
