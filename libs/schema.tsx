@@ -4,8 +4,13 @@ function createSchema(article: Article): Object {
   return {
     '@context': 'http://schema.org/',
     '@type': 'Article',
+    headline: article.title,
     datePublished: article.publishedAt,
     dateModified: article.revisedAt,
+    author: {
+      '@type': 'Person',
+      name: 'mopeneko',
+    },
   };
 }
 
