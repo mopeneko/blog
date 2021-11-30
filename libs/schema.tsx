@@ -2,9 +2,9 @@ import { Article } from 'mopeneko_blog';
 
 function createSchema(article: Article): Object {
   return {
-    '@context': 'https://blog.lem0n.cc',
+    '@context': 'http://schema.org/',
     '@type': 'Article',
-    datePosted: article.publishedAt,
+    datePublished: article.publishedAt,
     dateModified: article.revisedAt,
   };
 }
