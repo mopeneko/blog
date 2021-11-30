@@ -42,9 +42,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 const ArticleDetail: React.FC<Props> = ({ article }) => {
   return (
     <>
-      <Head>
-        {createSchemaElement(article)}
-      </Head>
+      <Head>{createSchemaElement(article)}</Head>
 
       <NextSeo title={`${article.title} - もペブログ`} />
 
