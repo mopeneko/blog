@@ -1,13 +1,13 @@
-import { NextSeo } from 'next-seo'
+import { NextSeo } from 'next-seo';
 
 type SeoProps = {
-  title: string
-  url: string
-  description: string
-}
+  title: string;
+  url: string;
+  description: string;
+};
 
 const SEO = (props: SeoProps) => {
-  const twitterId = '@_m_vt'
+  const twitterId = '@_m_vt';
   return (
     <NextSeo
       title={props.title}
@@ -47,7 +47,7 @@ const SEO = (props: SeoProps) => {
       //     appId: '',
       //   }}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
