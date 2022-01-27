@@ -53,7 +53,7 @@ const ArticleDetail: React.FC<Props> = ({ article }) => {
           <Text>
             {dayjs(article.publishedAt).tz('Asia/Tokyo').format('YYYY/MM/DD')}
           </Text>
-          <Box mt={5}>
+          <Box my={5}>
             <HTMLRenderer html={article.content} />
           </Box>
         </article>
