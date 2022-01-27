@@ -4,6 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
+import { theme } from 'theme';
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -16,11 +17,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/favicon192x192.png" />
       </Head>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
     </>
-  )
+  );
 }
 
 export default MyApp
