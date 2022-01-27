@@ -7,6 +7,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import ArticleList from 'components/ArticleList';
 import { useRouter } from 'next/router';
+import Seo from '../components/wrapper/Seo';
 
 type Props = {
   articles: Article[];
@@ -33,7 +34,11 @@ const Home: React.FC<Props> = ({ articles }) => {
 
   return (
     <>
-      <NextSeo title='もぺブログ' />
+      <Seo
+        title='もぺブログ'
+        url='https://blog.lem0n.cc'
+        description='もぺねこのぶろぐ！'
+      />
 
       <Header />
       <Container maxW='container.md'>
