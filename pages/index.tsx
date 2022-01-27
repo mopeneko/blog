@@ -6,6 +6,7 @@ import { client } from 'libs/client';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import ArticleList from 'components/ArticleList';
+import { useRouter } from 'next/router';
 
 type Props = {
   articles: Article[];
@@ -23,6 +24,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const Home: React.FC<Props> = ({ articles }) => {
+  const router = useRouter();
+
+  // PWA出力時、articles が undefined になるため
+  if (typeof articles === 'undefined') {
+    articles = [];
+  }
+
   return (
     <>
       <NextSeo title='もぺブログ' />
