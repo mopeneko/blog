@@ -5,6 +5,8 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import { theme } from 'theme';
+import '@fontsource/open-sans';
+import '@fontsource/noto-sans-jp';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
