@@ -20,13 +20,13 @@ const SEO = (props: SeoProps) => {
         // TODO: maskableなアイコンを用意する
         images: [
           {
-            url: `${props.url}/512.png`,
+            url: `${props.url}/icon-512x512.png`,
             width: 512,
             height: 512,
             alt: props.title,
             type: 'image/png',
           },
-          { url: `${props.url}/512.png` },
+          { url: `${props.url}/icon-512x512.png` },
         ],
         site_name: props.title,
       }}
