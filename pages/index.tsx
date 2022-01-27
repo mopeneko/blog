@@ -35,9 +35,9 @@ const Home: React.FC<Props> = ({ articles }) => {
   return (
     <>
       <Seo
-        title="もぺブログ"
-        url="https://blog.lem0n.cc"
-        description="もぺねこのぶろぐ！"
+        title='もぺブログ'
+        url='https://blog.lem0n.cc'
+        description='もぺねこのぶろぐ！'
       />
 
       <Header />
