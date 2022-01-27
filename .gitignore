@@ -36,4 +36,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+# workbox/sw
+
+/public/sw*
+/public/workbox*
+
 public/sitemap.xml
+
+public/fallback-*.js
