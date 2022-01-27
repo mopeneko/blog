@@ -1,4 +1,4 @@
 // オフライン時にキャッシュされるページ
-import Home from './index'
+import Home from './index';
 
-export default Home
+export default Home;
