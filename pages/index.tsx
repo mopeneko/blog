@@ -1,11 +1,12 @@
 import { GetStaticProps } from 'next';
 import { Container } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import { client } from '../libs/client';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ArticleList from '../components/ArticleList';
-import { Article } from '../types/article';
+import type { Article } from 'mopeneko_blog';
+import { client } from 'libs/client';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import ArticleList from 'components/ArticleList';
+import { useRouter } from 'next/router';
 import Seo from '../components/wrapper/Seo';
 
 type Props = {
@@ -19,10 +20,18 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       articles: data.contents,
     },
+    revalidate: 60,
   };
 };
 
 const Home: React.FC<Props> = ({ articles }) => {
+  const router = useRouter();
+
+  // PWA出力時、articles が undefined になるため
+  if (typeof articles === 'undefined') {
+    articles = [];
+  }
+
   return (
     <>
       <Seo
@@ -32,7 +41,7 @@ const Home: React.FC<Props> = ({ articles }) => {
       />
 
       <Header />
-      <Container maxW="container.md">
+      <Container maxW='container.md'>
         <ArticleList articles={articles} />
       </Container>
       <Footer />
