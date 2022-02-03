@@ -65,7 +65,11 @@ const options: HTMLReactParserOptions = {
       }
 
       if (domNode.name === 'code') {
-        return <Code>{domToReact(domNode.children, options)}</Code>;
+        return (
+          <Code width='100%' whiteSpace='pre-wrap'>
+            {domToReact(domNode.children, options)}
+          </Code>
+        );
       }
 
       if (domNode.name === 'blockquote') {
