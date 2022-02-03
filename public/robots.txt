@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://lem0n.cc/sitemap.xml
+Sitemap: https://blog.lem0n.cc/sitemap.xml
