@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://lem0n.cc/sitemap.xml
