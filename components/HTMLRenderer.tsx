@@ -66,7 +66,7 @@ const options: HTMLReactParserOptions = {
 
       if (domNode.name === 'code') {
         return (
-          <Code width='100%' whiteSpace='pre-wrap'>
+          <Code width='100%' overflowX='scroll'>
             {domToReact(domNode.children, options)}
           </Code>
         );
