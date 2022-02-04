@@ -1,3 +1,7 @@
+img {
+  max-width: min(100%, 360px) !important;
+}
+
 .embedly-embed {
   max-width: 100%;
 }
