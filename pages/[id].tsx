@@ -59,8 +59,8 @@ const ArticleDetail: React.FC<Props> = ({ article }) => {
             </Box>
           </article>
         </Container>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

@@ -45,8 +45,8 @@ const Home: React.FC<Props> = ({ articles }) => {
         <Container maxW='container.md'>
           <ArticleList articles={articles} />
         </Container>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };
