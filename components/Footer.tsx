@@ -4,7 +4,7 @@ import { MdCode } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <footer style={{position: 'absolute', bottom: 0, width: '100%'}}>
+    <footer style={{ position: 'absolute', bottom: 0, width: '100%' }}>
       <Flex
         as='footer'
         p={6}
