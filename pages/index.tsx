@@ -40,10 +40,12 @@ const Home: React.FC<Props> = ({ articles }) => {
         description='もぺねこのぶろぐ！'
       />
 
-      <Header />
-      <Container maxW='container.md'>
-        <ArticleList articles={articles} />
-      </Container>
+      <div style={{ minHeight: '100vh' }}>
+        <Header />
+        <Container maxW='container.md'>
+          <ArticleList articles={articles} />
+        </Container>
+      </div>
       <Footer />
     </>
   );

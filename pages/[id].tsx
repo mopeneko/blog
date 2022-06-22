@@ -46,18 +46,20 @@ const ArticleDetail: React.FC<Props> = ({ article }) => {
 
       <NextSeo title={`${article.title} - もペブログ`} />
 
-      <Header />
-      <Container maxW='container.md' pt={4}>
-        <article>
-          <Heading>{article.title}</Heading>
-          <Text>
-            {dayjs(article.publishedAt).tz('Asia/Tokyo').format('YYYY/MM/DD')}
-          </Text>
-          <Box my={5}>
-            <HTMLRenderer html={article.content} />
-          </Box>
-        </article>
-      </Container>
+      <div style={{ minHeight: '100vh' }}>
+        <Header />
+        <Container maxW='container.md' pt={4}>
+          <article>
+            <Heading>{article.title}</Heading>
+            <Text>
+              {dayjs(article.publishedAt).tz('Asia/Tokyo').format('YYYY/MM/DD')}
+            </Text>
+            <Box my={5}>
+              <HTMLRenderer html={article.content} />
+            </Box>
+          </article>
+        </Container>
+      </div>
       <Footer />
     </>
   );
